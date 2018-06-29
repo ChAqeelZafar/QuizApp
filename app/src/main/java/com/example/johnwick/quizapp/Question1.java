@@ -31,6 +31,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
     Button exit ;
     TextView scoring ;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -190,7 +191,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -210,7 +211,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -237,7 +238,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -257,7 +258,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -283,7 +284,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -303,7 +304,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -329,7 +330,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
@@ -349,7 +350,7 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        scoring.setText("Total score is " + totalScore + " & Your Score is " + score);
                         exit.setVisibility(View.VISIBLE);
                         exit.setEnabled(true);
 
