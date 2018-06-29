@@ -17,6 +17,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
     int score = 0 ;
     int totalScore = 50 ;
     int loop1 = 0 ;
+    Bundle get ;
+    String name ;
+    TextView userName ;
 
 
     TextView question ;
@@ -25,12 +28,16 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
     Button o2 ;
     Button o3 ;
     Button o4 ;
+    Button exit ;
     TextView scoring ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
+
+        get = getIntent().getExtras();
+        name = get.getString("nameEntered");
 
         ques[0] = "0 + 1 = ?" ;
         ans[0] = "1" ;
@@ -49,13 +56,25 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
         o2 = findViewById(R.id.q1_button_o2);
         o3 = findViewById(R.id.q1_button_o3);
         o4 = findViewById(R.id.q1_button_o4);
+        exit = findViewById(R.id.q1_button_exit);
         scoring = findViewById(R.id.q1_text_score);
         scoring.setVisibility(View.INVISIBLE);
 
+        exit.setVisibility(View.INVISIBLE);
+        exit.setEnabled(false);
+
+        userName = findViewById(R.id.q1_text_name);
+        userName.setText("WELCOME! " + name);
+
+
+
+        userName.postDelayed(new Runnable() {
+            public void run() {
+                userName.setVisibility(View.INVISIBLE);
+            }
+        }, 2000);
+
         method(loop1);
-
-
-
 
 
 
@@ -171,7 +190,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -189,7 +210,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -214,7 +237,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -232,7 +257,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -256,7 +283,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -274,7 +303,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -298,7 +329,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -316,7 +349,9 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
                         o4.setVisibility(View.GONE);
                         question.setVisibility(View.GONE);
                         scoring.setVisibility(View.VISIBLE);
-                        scoring.setText("Total score is " + totalScore + "\n Your Score is " + score);
+                        scoring.setText("Total score is " + totalScore + "\nYour Score is " + score);
+                        exit.setVisibility(View.VISIBLE);
+                        exit.setEnabled(true);
 
                         //o1.setVisibility();
                     } else {
@@ -327,5 +362,11 @@ public class Question1 extends AppCompatActivity implements View.OnClickListener
             }
 
 
+    }
+
+    public void clickexit(View v) {
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
     }
 }

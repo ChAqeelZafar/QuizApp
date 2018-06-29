@@ -40,14 +40,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == start) {
 
-            if ((userName.getText().toString()).equals("")) {
+            if ((userName.getText().toString()).equals("") || (userName.getText().toString()).equals(" ") || (userName.getText().toString()).equals("  ") || (userName.getText().toString()).equals("   ")) {
                 Toast.makeText(this, "Enter User Name", Toast.LENGTH_SHORT).show();
             }
             else{
 
-
                 name = userName.getText().toString() ;
+                Bundle bundle = new Bundle() ;
+                bundle.putString("nameEntered",name);
                 Intent intent = new Intent(this, Question1.class) ;
+                intent.putExtras(bundle);
                 startActivity(intent) ;
 
 
